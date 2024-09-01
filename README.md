@@ -39,10 +39,7 @@
     <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,vscode" alt="Skills Icons"/>
   </a>
 </div>
-<br>
-<div align="center">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RasyidDevs&langs_count=5&theme=tokyonight">
-</div>
+
 
 <h1 align="center">
  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=4000&pause=500&color=0BF71D&center=true&width=435&lines=Thank+you+for+visiting" alt="Typing SVG" /></a>
