@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/custome.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="js/bootstrap.bundle.js" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="fontawesome/js/all.min.js" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Raleway:wght@200;500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Raleway:wght@200;500&family=Satisfy&display=swap");
+    </style>
+    <!-- feather icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top " id="navbarjs">
+      <div class="container-fluid br">
+        <a class="navbar-brand mr-2 order-lg-1" href="#">TRENDIFY</a>
+        <div class="nav-btns order-lg-2">
+          <button type="button" class="btn" id="shop-bar">
+            <i data-feather="shopping-cart"></i>
+          </button>
+          <button type="button" class="btn" id="search-button">
+            <i data-feather="search"></i>
+          </button>
+        </div>
+        <!-- Search Form Start -->
+        <div class="search-form">
+          <input
+            type="search"
+            id="search-box"
+            placeholder="search
+              "
+          />
+          <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- Search Form End -->
+        <!-- Shopping Cart Start -->
+        <div class="shopping-cart scrollspy-example" data-spy="scroll">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="cart text-center">
+                <h3>Shopping List</h3>
+              </div>
+            </div>
+          </div>
+          <div class="cart-items overflow-auto"></div>
+          <div class="row">
+            <div class="col-md-6 col-6 col-sm-6"></div>
+            <div class="col-md-3 col-3 col-sm-3">
+              <div class="d-flex justify-content-end">
+                <h5 class="cart-total-title">Total:</h5>
+              </div>
+            </div>
+            <div class="col-md-3 col-3 col-sm-3">
+              <div class="justify-content-start">
+                <p
+                  style="font-size: 10px; color: black"
+                  class="cart-total-price"
+                >
+                  Rp0K
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2">
+            <div class="col-md-12">
+              <div class="cart-beli px-2">
+                <a
+                  href=""
+                  class="btn btn-md bg-dark px-2 btn-purchase"
+                  style="color: white; width: 100%"
+                  >BELI!</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Shopping Cart End -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse order-lg-1"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link active" href="#" id="navbarhome"
+              >Home <span class="sr-only">(current)</span></a
+            >
+            <a class="nav-link mr-2" href="#produkKami" id="navbarproduk"
+              >Produk Kami</a
+            >
+            <a class="nav-link mr-2" href="#" id="navbartentang"
+              >Tentang Kami</a
+            >
+            <a class="nav-link mr-2" href="#" id="navbarsubscribe">Subscribe</a>
+            <a class="nav-link mr-2" href="#" id="navLogin">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- BANNER START -->
+    <div class="container-fluid banner" id="home">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-md-8 my-5">
+            <h1>BE YOUR OWN</h1>
+            <p class="my-2">
+              JADILAH DIRI SENDIRI DENGAN MEMBELI PRODUK <span>TRENDIFY</span>
+            </p>
+            <a href="#jualan" class="btn btn-lg p-3 my-2" id="belisekarang"
+              >Beli Sekarang -></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BANNER END -->
+
+    <!-- PRODUK -->
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-sm-12 text-center nama">
+          <p>BEST SELLER</p>
+        </div>
+      </div>
+      <div class="row seller">
+        <div class="col-md-6 sell1">
+          <div class="seller1 py-4">
+            <h4>BEST</h4>
+            <h3>TRENDIFY</h3>
+            <p>Rp 60k <span>Rp100k</span></p>
+            <a
+              href=""
+              class="btn btn-lg p-1 my-2 cari"
+              style="background-color: black; color: white"
+              >BELI!</a
+            >
+          </div>
+        </div>
+        <div class="col-md-6 sell2">
+          <div class="seller2 py-4">
+            <h4>BEST</h4>
+            <h3>TRENDIFY</h3>
+            <p class="harga">Rp 80k <span class="span">Rp120k</span></p>
+            <a
+              href=""
+              class="btn btn-lg p-1 my-2 cari"
+              style="background-color: black; color: white"
+              style="background-color: black; color: white"
+              >BELI!</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-3 produk" id="jualan">
+      <div class="row">
+        <div class="col-sm-12 text-center nama">
+          <p>PRODUK KAMI</p>
+        </div>
+      </div>
+      <div class="row products">
+        <div class="col-md-3 py-4 pl-4 ml-3 kaos">
+          <p class="mt-2">PRODUK</p>
+          <h4>KAOS</h4>
+          <h3>TRENDIFY</h3>
+          <a
+            href="kaos.html"
+            class="btn btn-lg p-1 my-2 cari"
+            style="background-color: black; color: white"
+            >Cari!</a
+          >
+        </div>
+        <div class="col-md-3 py-4 pl-4 ml-3 jaket">
+          <p class="mt-2">PRODUK</p>
+          <h4>JAKET</h4>
+          <h3>TRENDIFY</h3>
+          <a
+            href=""
+            class="btn btn-lg p-1 my-2 cari"
+            style="background-color: black; color: white"
+            >Cari!</a
+          >
+        </div>
+        <div class="col-md-3 py-4 pl-4 ml-3 celana">
+          <p class="mt-2">PRODUK</p>
+          <h4>CELANA</h4>
+          <h3>TRENDIFY</h3>
+          <a
+            href=""
+            class="btn btn-lg p-1 my-2 cari"
+            style="background-color: black; color: white"
+            >Cari!</a
+          >
+        </div>
+      </div>
+      <div class="row mt-3 products2">
+        <div class="col-md-4 py-4 sepatu">
+          <p class="mt-2">PRODUK</p>
+          <h4>SEPATU</h4>
+          <h3>TRENDIFY</h3>
+          <a
+            href=""
+            class="btn btn-lg p-1 my-2 cari"
+            style="background-color: black; color: white"
+            >Cari!</a
+          >
+        </div>
+        <div class="col-md-4 ml-3 py-4 topi">
+          <p class="mt-2">PRODUK</p>
+          <h4>TOPI</h4>
+          <h3>TRENDIFY</h3>
+          <a
+            href=""
+            class="btn btn-lg p-1 my-2 cari"
+            style="background-color: black; color: white"
+            >Cari!</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUK END -->
+    <!-- ALL PRUDUK START -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="row mt-4">
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/kaos/kaos1.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image" 
+              />
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">KAOS HITAM</p>
+                  <p class="harga">Rp100k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/kaos/putih.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              />
+
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">KAOS PUTIH</p>
+                  <p class="harga">Rp100k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/sepatu/kuning.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-png-vectors%2Fsepatu&psig=AOvVaw0Y-_bfXGp2fBkB05lCobN1&ust=1694856187944000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJi34LulrIEDFQAAAAAdAAAAABBr-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">
+                    SEPATU KUNING
+                  </p>
+                  <p class="harga">Rp150k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/sepatu/merah.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Fso%2Fsepatu&psig=AOvVaw0Y-_bfXGp2fBkB05lCobN1&ust=1694856187944000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqGAoTCJi34LulrIEDFQAAAAAdAAAAABCrAQ-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">
+                    SEPATU MERAH
+                  </p>
+                  <p class="harga">Rp150k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/jaket/jaket1.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bigmountaincider.com%2Fstore%2Fbig-mountain-ciderworks-full-zip-hooded-sweatshirt-black&psig=AOvVaw24uCBVBQl01SERXR2hsN3o&ust=1694856829580000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJC_z-2nrIEDFQAAAAAdAAAAABAS-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">
+                    JAKET HITAM
+                  </p>
+                  <p class="harga">Rp120k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/jaket/jaket2.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fdesign-koalats.com%2Fkoalats%2Fshop%2Fblank-product-detail%2F5141182&psig=AOvVaw24uCBVBQl01SERXR2hsN3o&ust=1694856829580000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJC_z-2nrIEDFQAAAAAdAAAAABAx -->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">
+                    HOODIE HITAM
+                  </p>
+                  <p class="harga">Rp100k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/celana/celana.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fid%2Fsearch%3Fq%3Dcelana%2Bpanjang&psig=AOvVaw23Znl2jueCavC2OgZxQ9wy&ust=1694857183236000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJiRkZaprIEDFQAAAAAdAAAAABBP -->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">
+                    CELANA HITAM
+                  </p>
+                  <p class="harga">Rp100k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/celana/celana1.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.pngtree.com%2Ffree-png-vectors%2Fcelana&psig=AOvVaw23Znl2jueCavC2OgZxQ9wy&ust=1694857183236000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJiRkZaprIEDFQAAAAAdAAAAABBY-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">CELANA</p>
+                  <p class="harga">100k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  > 
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4 baris3">
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/topi/topi1.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngdownload.id%2Fpng-107z8f%2F&psig=AOvVaw2vqxZBul4EsbnVcYx0fFJp&ust=1694857617461000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCICWluWqrIEDFQAAAAAdAAAAABBi-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">TOPI</p>
+                  <p class="harga">Rp100k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/topi/topi2.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fid%2Fpng-tajcz&psig=AOvVaw2vqxZBul4EsbnVcYx0fFJp&ust=1694857617461000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqGAoTCICWluWqrIEDFQAAAAAdAAAAABCzAg-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">TOPI HITAM</p>
+                  <p class="harga">Rp100k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/kaos/red.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="img-fluid w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.pngwing.com/id/free-png-syrsc-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">KAOS MERAH</p>
+                  <p class="harga">Rp80k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 mt-3 col-sm-10 col-md-3 offset-1 offset-md-0">
+              <img
+                src="image/kaos/kuning.png"
+                alt=""
+                style="padding: 1.5rem 2rem"
+                class="w-100 d-block mx-auto shop-item-image"
+              /> <!-- Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngdownload.id%2Fdownload%2Fkaos-polos.html&psig=AOvVaw0_d9CjUdppjoKQ1oRCMQ-m&ust=1695231234992000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCND_oc6at4EDFQAAAAAdAAAAABAE-->
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="carts">
+                  <p class="text-capitalize my-1 shop-item-title">
+                    KAOS KUNING
+                  </p>
+                  <p class="harga">Rp80k</p>
+                  <button
+                    type="button"
+                    class="btn px-3 py-2 btnduk"
+                    style="
+                      border: 1px solid white;
+                      color: white;
+                      border-radius: 50px;
+                    "
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ALL PRUDUK END-->
+    <!-- SPECIAL OFFER START-->
+    <div class="container-fluid special mt-5">
+      <div class="row">
+        <div class="col-md-12 p-5 justify-content-end">
+          <h4 style="color: aliceblue">DESAIN BAJU TERBARU</h4>
+          <h2 style="color: aliceblue">20% OFF</h2>
+          <p
+            style="
+              color: aliceblue;
+              font-family: 'Bebas Neue', sans-serif;
+              font-size: 24px;
+            "
+          >
+            2023
+          </p>
+          <a href="" class="btn btn-lg p-1 cari" style="color: white">BELI!</a>
+        </div>
+      </div>
+    </div>
+    <!-- SPECIAL OFFER END -->
+    <!-- ABOUT US START -->
+    <div class="container-fluid py-3 learn" id="tentang">
+      <div class="row py-5">
+        <div class="col-md-6 my-3">
+          <img src="image/about/foto.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-6 my-6">
+          <hr />
+          <h1 style="color: white; font-family: 'Bebas Neue', sans-serif">
+            TENTANG KAMI
+          </h1>
+          <p class="text-muted">
+            Sebuah tanda terimakasih bagi anda yang memakai layanan jasa
+            <span style="font-family: 'Bebas Neue', sans-serif">TRENDIFY</span>
+          </p>
+          <p style="color: white">
+            <span style="font-family: 'Bebas Neue', sans-serif">TRENDIFY</span>
+            adalah perusahaan yang fokus penjualan pakaian dan tren konsumen di
+            Indonesia. Kami membantu Anda untuk menyelesaikan masalah dalam
+            berpakaian, serta memberikan rekomendasi gaya yang sesuai dengan
+            preferensi Anda agar Anda tampil stylish sehari-hari.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT US END -->
+    <!-- Subscription -->
+    <div class="container-fluid" style="background-color: #111" id="subscribe">
+      <div class="row">
+        <div class="col-10 col-sm-10 col-md-10 offset-1 text-center">
+          <h2
+            style="color: white; font-family: 'Bebas Neue', sans-serif"
+            class="mt-5"
+          >
+            Newsletter subscription
+          </h2>
+          <p style="color: white" class="text-muted mt-3">
+            Ayo berlangganan di toko kami untuk mendapatkan diskon dan cashback
+            setiap harinya
+          </p>
+          <div class="subs mt-4 mb-5 d-flex justify-content-center">
+            <input type="email" placeholder="Enter Your Email" class="pl-3" />
+            <a href="" class="btn btn-md subbutton">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER START -->
+    <div class="container-fluid footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12 py-3 pertama">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 pt-1 kedua">
+            <a href="">Home</a>
+            <a href="">ProdukKami</a>
+            <a href="">ProdukTerbaik</a>
+            <a href="">Kontak</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 pt-3 ketiga">
+            <p>Created by <a href="">Rasyid Bomantoro &copy; 2023</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER END -->
+    <!-- LOGIN START -->
+    <div id="login">
+      <div class="log">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-end">
+            <i data-feather="x" id="close-icon"></i>
+          </div>
+        </div>
+        <h3 class="text-center">LOGIN</h3>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-lg"
+            style="
+              color: white;
+              width: 100%;
+              font-weight: bold;
+              background-color: black;
+            "
+          >
+            LOGIN
+          </button>
+          <div class="row mt-5 text-center">
+            <div class="col-md-12">
+              <p>Or Login with</p>
+            </div>
+          </div>
+          <div class="row sosmed mr-2 ml-2">
+            <div class="col-md-6 text-center facebook">
+              <i class="fa-brands fa-facebook"></i>
+              <span>Facebook</span>
+            </div>
+            <div class="col-md-6 text-center google">
+              <img
+                src="image/google/google.png"
+                style="width: 20px; height: 20px"
+                alt=""
+              />
+              <span>Google</span>
+            </div>
+          </div>
+          <div class="row py-3 ">
+            <div class="col-md-4 col-4"></div>
+            <div class="col-md-8 col-8 text-center">
+              <a
+                href=""
+                style="color: black; text-decoration: underline"
+                class="ml-5"
+                id="createlink"
+                >Create account</a
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- LOGIN END -->
+    <!-- CREATE ACCOUNT START -->
+    <div id="login2">
+      <div class="create">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-end">
+            <i data-feather="x" id="close-icon2"></i>
+          </div>
+        </div>
+        <h3 class="text-center">LOGIN</h3>
+        <form class="pt-2">
+          <div class="row">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First name"
+              />
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Last name" />
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="exampleInputEmail1">Email address</label>
+
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="exampleInputEmail1">No Handphone</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="No. HP"
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-lg mt-3"
+            style="
+              color: white;
+              width: 100%;
+              font-weight: bold;
+              background-color: black;
+            "
+          >
+            DAFTAR
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+      feather.replace(); //feather icon
+    </script>
+    <script src="js/index.js"></script>
+    <script>
+      $("#belisekarang").click(function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#jualan").offset().top,
+          },
+          100
+        );
+      });
+      $("#navbarproduk").click(function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#jualan").offset().top,
+          },
+          100
+        );
+      });
+      $("#navbartentang").click(function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#tentang").offset().top,
+          },
+          100
+        );
+      });
+      $("#navbarsubscribe").click(function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#subscribe").offset().top,
+          },
+          100
+        );
+      });
+      $("#navbarhome").click(function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#home").offset().top,
+          },
+          1
+        );
+      });
+    </script>
+  </body>
+</html>

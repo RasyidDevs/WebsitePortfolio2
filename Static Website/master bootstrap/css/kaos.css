@@ -1,0 +1,376 @@
+/* Navbar  */
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: black !important;
+  }
+  .nava {
+    box-shadow: -2px 2px 10x #000 !important;
+  }
+  .login {
+    background-color: black !important;
+    width: 90px !important;
+  }
+  .login a {
+    color: white !important;
+  }
+  .br {
+    display: flex !important;
+  }
+  .navbar-brand {
+    flex: 1;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+  }
+  .navbar-collapse {
+    flex: 3;
+  }
+  .logo {
+    display: flex;
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    margin-left: auto;
+    right: 0 !important;
+  }
+  .nav-btns i {
+    font: 10px !important;
+  }
+  .navbar-nav a {
+    color: black !important;
+    font-size: 17px !important;
+  }
+  .navbar-nav a::after {
+    content: "";
+    display: block;
+    border-bottom: 0.1rem solid grey;
+    padding-bottom: 0.3rem;
+    transition: 0.3s ease;
+    transform: scaleX(0);
+  }
+  .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  /* NAVBAR-END */
+  /* banner START */
+  .banner {
+    background-image: url(../image/men.jpg) !important; /* Diambil dari https://unsplash.com/photos/UiVe5QvOhao*/
+    background: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 85vh;
+  
+    border-radius: 8px;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .banner h1 {
+    color: white;
+  }
+  .banner p {
+    color: white !important;
+  }
+  .banner p span {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+  }
+  .banner a {
+    background-color: black;
+    border-radius: 10px !important;
+    font-size: 18px !important;
+  }
+  .banner a:hover {
+    background-color: #bfbebb;
+  }
+  /* Banner END */
+  /* BEST SELLER START */
+  .nama p {
+    font-family: "Bebas Neue", sans-serif;
+  
+    color: white !important;
+  }
+  
+  .seller {
+    justify-content: center;
+    align-items: center;
+  }
+  .seller1:hover,
+  .seller2:hover {
+    transform: scale(1.05);
+  }
+  .seller p span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 14px;
+  }
+  /* SELLER 1 */
+  
+  .seller1 {
+    background-color: #b9b9b9 !important;
+    padding-left: 30px !important;
+    border-radius: 5px;
+    background-image: url(../image/produk/produk6.png) !important; /* Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fid%2Fpng-cmgoc&psig=AOvVaw14E9LOXbHEExsvggrVeexJ&ust=1694333641381000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJCRwOmKnYEDFQAAAAAdAAAAABAE */
+    background: no-repeat;
+    background-position: 80%;
+    background-position-y: center;
+    background-size: auto !important;
+  }
+  .seller1 h3 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 24px;
+  }
+  .seller1 h4 {
+    font-family: "Satisfy", sans-serif;
+    font-size: 20px;
+  }
+  /* SELLER 2 */
+  .seller2 {
+    background-color: #111 !important;
+    padding-left: 30px !important;
+    border-radius: 5px;
+    background-image: url(../image/produk/produk5.png) !important; /* Gambar diambiil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fid%2Fpng-wqguw&psig=AOvVaw2W-zM3I91JAvDyEOT8gJM5&ust=1694333594520000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJjnn9OKnYEDFQAAAAAdAAAAABAE*/
+    background: no-repeat;
+    background-position-x: 80%;
+    background-position-y: center;
+    background-size: 400px 250px;
+  }
+  .seller2 h3 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 24px;
+    color: white;
+  }
+  .seller2 h4 {
+    font-family: "Satisfy", sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+  .seller2 p {
+    color: #fff !important;
+  }
+  /* BEST SELLER END */
+  /* Produk start */
+  .products {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .kaos:hover,
+  .jaket:hover,
+  .celana:hover,
+  .sepatu:hover,
+  .topi:hover {
+    transform: scale(1.05);
+  }
+  /* KAOS */
+  .kaos {
+    background-color: #bfbebb !important;
+    border-radius: 5px;
+    background-image: url(../image/produk/produk1.png) !important /* Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepnglogos.com%2Fpics%2Fkaos-polospngfree&psig=AOvVaw2Zj_kYtz0hKZkZa2PaAHan&ust=1694235183349000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNCip4icmoEDFQAAAAAdAAAAABAE */;
+    background: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+  }
+  
+  .cari {
+    width: 100px;
+    background-color: black !important;
+  }
+  .cari:hover {
+    background-color: #444 !important;
+  }
+  
+  .products a:hover::after {
+    background-color: #444;
+  }
+  .kaos h3 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 24px;
+  }
+  .kaos p {
+    color: #444 !important;
+  }
+  .kaos h4 {
+    color: #444 !important;
+  }
+  
+  /* JAKET */
+  .jaket {
+    background-color: #dee0e3 !important;
+    border-radius: 5px;
+    background-image: url(../image/produk/produk2.png) !important /* Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngmart.com%2Fid%2Fimage%2F8563&psig=AOvVaw2_g3LJbIb5mOsQ4za_8QzV&ust=1694235269772000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKCE4rGcmoEDFQAAAAAdAAAAABAE */;
+    background: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+  }
+  .jaket h3 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 24px;
+  }
+  .jaket p {
+    color: #444 !important;
+  }
+  .jaket h4 {
+    color: #444 !important;
+  }
+  
+  /* CELANA */
+  .celana {
+    background-color: #dee0e3 !important;
+    border-radius: 5px;
+    background-image: url(../image/produk/produk.png) !important /* Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngfind.com%2Ffreepng%2Fpants-png%2F&psig=AOvVaw1MXNUlxY2Yjhtm8AnblTdT&ust=1694238789330000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOCI_b-pmoEDFQAAAAAdAAAAABA-*/;
+    background: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+  }
+  .celana h3 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 24px;
+  }
+  .celana p {
+    color: #444 !important;
+  }
+  .celana h4 {
+    color: #444 !important;
+    mix-blend-mode: darken;
+  }
+  /* PRODUK 2 */
+  .products2 {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* SEPATU */
+  .sepatu {
+    background-color: #dee0e3 !important;
+    border-radius: 5px;
+    background-image: url(../image/produk/produk3.png) !important /* Gambar diambil dari https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fid%2Ffree-png-moogg&psig=AOvVaw2Yv_rxeu4SiSU49vUV46oL&ust=1694245776760000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKih8cPDmoEDFQAAAAAdAAAAABAE*/;
+    background: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    padding-top: 20px !important;
+    padding-left: 30px !important;
+  }
+  .sepatu h3 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 24px;
+  }
+  .sepatu p {
+    color: #444 !important;
+  }
+  .sepatu h4 {
+    color: #444 !important;
+    mix-blend-mode: darken;
+  }
+  /* TOPI */
+  .topi {
+    background-color: #bfbebb !important;
+    border-radius: 5px;
+    background-image: url(../image/produk/produk4.png) !important;
+    background: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+    padding-top: 20px !important;
+    padding-left: 30px !important;
+  }
+  .topi h3 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 24px;
+  }
+  .topi p {
+    color: #444 !important;
+  }
+  .topi h4 {
+    color: #444 !important;
+    mix-blend-mode: darken;
+  }
+  /* FOOTER START */
+  .footer {
+    background-color: #bfbebb;
+  }
+  .pertama a {
+    color: black;
+    font-size: 25px;
+    padding-inline: 3px;
+  }
+  .pertama a:hover {
+    color: #6a6f75;
+  }
+  .kedua a,
+  .ketiga a {
+    color: black;
+  }
+  .kedua a {
+    padding-right: 10px !important;
+  }
+  .ketiga a {
+    font-weight: bold;
+  }
+  /* PRODUK KAOS */
+  .card:hover{
+    transform: scale(1.05);
+  }
+  .card p span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: small;
+  }
+  /* FOOTER END */
+  /* media query */
+  @media (max-width: 767px) {
+    .celana,
+    .jaket,
+    .kaos {
+      margin-top: 10px !important;
+      margin-right: 10px !important;
+      margin-left: 10px !important;
+    }
+    .topi {
+      margin-top: 10px !important;
+      margin-right: 10px !important;
+    }
+    .sepatu {
+      margin-right: 10px !important;
+      margin-left: 14.5px !important;
+    }
+    .seller2 {
+      margin-top: 10px !important;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1020px) {
+    .seller1,
+    .seller2 {
+      background-size: 240px 150px !important;
+    }
+  }
+  @media (min-width: 1073px) and (max-width: 1185px) {
+    .kaos {
+      background-size: 150px 147px !important;
+    }
+    .jaket,
+    .celana {
+      background-size: 160px 160px !important;
+    }
+    .sepatu,
+    .topi {
+      background-size: 250px 126px !important;
+    }
+  }
+  /* Handphone */
+  @media (max-width: 552px) {
+    .seller1,
+    .seller2 {
+      background-size: 240px 150px !important;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1073px) {
+    .kaos {
+      background-size: 128px 125px !important;
+    }
+    .jaket,
+    .celana {
+      background-size: 130px 130px !important;
+    }
+    .sepatu,
+    .topi {
+      background-size: 220px 110px !important;
+    }
+  }
+  
